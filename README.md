@@ -1,5 +1,7 @@
 # 🚀 Squeeze Page WLS
 
+[![Aceder à Squeeze Page Ao Vivo](https://img.shields.io/badge/🔗_Ver_Projeto_Online-00C853?style=for-the-badge&logo=google-chrome&logoColor=white)](https://wls-djsf.github.io/squeeze-page-wls/)
+
 > Uma Squeeze Page moderna, limpa e responsiva, desenvolvida do zero com foco em conversão, UI/UX e boas práticas de estruturação web.
 
 ---
