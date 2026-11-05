@@ -1,28 +1,8 @@
-const form = document.getElementById('form-squeeze');
-const mensagemSucesso = document.getElementById('mensagem-sucesso');
+<form id="form-squeeze" class="formulario" action="https://9e2d51a1.sibforms.com/serve/MUIFAALIGzIY4HLL6YZ79OfaaF0dst7v09AF4Hk0CLmSHjGFqLecL8jH_1mvf4C7u--6KbiNdurd_EuIZ4dMryC0z6mWEENBc_EEjP9UPSqeceXjlmkwvhO0U8JSP8lYjiOXHmrFVlK_gFnUfLSL3MB788fRHSp1Hmzj9UTunIQrscaBfMQJaonnQC_xKYpPGoOMuy5p-bqFL-xTfw==" method="POST" target="hidden-iframe">
+    <input type="email" name="EMAIL" placeholder="Digite seu e-mail" required class="input-email" autocomplete="off">
+    <input type="hidden" name="locale" value="pt">
+    <button type="submit" class="botao-enviar">Assinar Agora</button>
+</form>
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Corta totalmente qualquer comportamento padrão do navegador
-
-    // Recolhe o valor do e-mail digitado
-    const emailInput = form.querySelector('input[name="EMAIL"]').value;
-
-    if (!emailInput) return;
-
-    // Cria um objeto FormData com os dados do formulário
-    const formData = new FormData(form);
-    const actionUrl = form.action;
-
-    // Dispara o envio em segundo plano sem bloquear a interface nem abrir telas
-    fetch(actionUrl, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-    }).catch(err => {
-        console.log('Envio efetuado:', err);
-    });
-
-    // Oculta o formulário instantaneamente e exibe a mensagem bonita na Squeeze Page
-    form.style.display = 'none';
-    mensagemSucesso.style.display = 'block';
-});
+<!-- Iframe invisível que segura a resposta do Brevo por trás dos panos -->
+<iframe name="hidden-iframe" style="display:none;" onload="if(this.src) { document.getElementById('form-squeeze').style.display='none'; document.getElementById('mensagem-sucesso').style.display='block'; }"></iframe>
