@@ -1,43 +1,30 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Squeeze Page WLS</title>
-
-    <!-- Link o CSS -->
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
 
 <main class="caixa-mae">
     <div class="caixa-central">
-        <!-- Elemento de mídia centralizado para identidade visual -->
         <img class="imagem-destaque" src="image.png" alt="Logotipo ilustrativo da squeeze page">
 
-
         <h1 class="titulo">Destaque Principal da Sua Oferta ou Produto</h1>
-        <p class="subtitulo">Insira uma breve descrição de até duas linhas para apresentar o benefício e capturar o contato do visitante.
-</p>
+        <p class="subtitulo">Insira uma breve descrição de até duas linhas para apresentar o benefício e capturar o contato do visitante.</p>
 
-        <form class="formulario" action="https://9e2d51a1.sibforms.com/serve/MUIFAALIGzIY4HLL6YZ79OfaaF0dst7v09AF4Hk0CLmSHjGFqLecL8jH_1mvf4C7u--6KbiNdurd_EuIZ4dMryC0z6mWEENBc_EEjP9UPSqeceXjlmkwvhO0U8JSP8lYjiOXHmrFVlK_gFnUfLSL3MB788fRHSp1Hmzj9UTunIQrscaBfMQJaonnQC_xKYpPGoOMuy5p-bqFL-xTfw==" method="POST" target="hidden-iframe">
-    
-            <!-- Input de e-mail integrado com o atributo correto exigido pelo Brevo -->
+        <!-- Formulário apontando para o iframe oculto -->
+        <form id="form-squeeze" class="formulario" action="https://9e2d51a1.sibforms.com/serve/MUIFAALIGzIY4HLL6YZ79OfaaF0dst7v09AF4Hk0CLmSHjGFqLecL8jH_1mvf4C7u--6KbiNdurd_EuIZ4dMryC0z6mWEENBc_EEjP9UPSqeceXjlmkwvhO0U8JSP8lYjiOXHmrFVlK_gFnUfLSL3MB788fRHSp1Hmzj9UTunIQrscaBfMQJaonnQC_xKYpPGoOMuy5p-bqFL-xTfw==" method="POST" target="hidden-iframe">
+            
             <input type="email" name="EMAIL" placeholder="Digite seu e-mail" required class="input-email" autocomplete="off">
-    
-            <!-- Campo oculto de segurança/idioma extraído do código do Brevo -->
             <input type="hidden" name="locale" value="pt">
-
-            <!-- O teu botão CTA original -->
+            
             <button type="submit" class="botao-enviar">Assinar Agora</button>
         </form>
 
-        <!-- Iframe invisível para capturar o envio sem abrir novas abas ou telas pretas -->
+        <!-- Iframe invisível que capta a resposta do Brevo por trás dos panos -->
         <iframe name="hidden-iframe" id="hidden-iframe" style="display: none;"></iframe>        
         
         <!-- Mensagem de Sucesso (Oculta por padrão) -->
@@ -50,7 +37,6 @@
     </div>
 </main>
 
-<!-- Importação do script JavaScript separado -->
 <script src="script.js"></script>
     
 </body>
