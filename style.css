@@ -1,0 +1,113 @@
+/* Reset universal de margens, espaçamentos e modelo de caixa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* Container principal: Definição de dimensões e centralização de layout com Flexbox */
+.caixa-mae {
+    height: 100vh;
+    width: 100vw; /* Correção sintática da propriedade de largura de viewport */
+
+    /* Propriedades de imagem e cor de fundo */
+    background-color: #f8f9fa;
+    background-size: cover;
+    background-position: center;
+
+    /* Alinhamento bidimensional dos elementos filhos */
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+/* Container estrutural central */
+.caixa-central {
+
+    /* Estilização de fundo, espaçamento interno, bordas e sombreamento */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px; /* Arredondamento dos vértices */
+    text-align: center;
+    color: #212529;
+    width: 90%;
+    max-width: 500px; /* Restrição de largura máxima do elemento */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05); /* Projeção de sombra para profundidade */
+}
+
+/* Elemento de imagem: Restrição dimensional e espaçamento vertical */
+.imagem-destaque {
+    max-width: 150px; /* Controle de escala para manter proporção sutil */
+    height: auto; /* Preservação da razão de aspecto original */
+    margin-bottom: 20px; /* Margem inferior de segurança para distanciamento do título */
+}
+
+/* Estilização tipográfica do título */
+.titulo {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+/* Estilização tipográfica do subtítulo */
+.subtitulo {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #5c6b73; /* Definição de cor complementar */
+}
+
+/* Container do formulário */
+.formulario {
+    display: flex;
+    flex-direction: row;
+    gap: 10px; /* Espaçamento interno entre os elementos filhos */
+}
+
+/* Campo de entrada de dados (E-mail) */
+.input-email {
+  flex: 1; /* Distribuição de espaço proporcional no eixo principal */
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none; /* Supressão do contorno de foco padrão do navegador */
+  background-color: #ffffff;
+  color: #212529;
+}
+
+/* Elemento de chamada para ação (Button CTA) */
+.botao-enviar {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: #00c853; /* Cor focal de conversão */
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Interpolação suave de estado */
+}
+
+/* Pseudo-classe de interação ao posicionar o cursor */
+.botao-enviar:hover {
+  background-color: #00a944;
+}
+
+/* Media Query para dispositivos mobile */
+@media (max-width: 480px) {
+  .formulario {
+    /* Alteração do eixo principal para disposição vertical */
+    flex-direction: column;
+  }
+  .input-email {
+    width: 100%; /* Redimensionamento total da largura */
+    margin-bottom: 12px; /* Margem inferior de segurança */
+  }
+  .botao-enviar {
+    width: 100%; /* Redimensionamento total da largura */
+  }
+}
