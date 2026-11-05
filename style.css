@@ -111,3 +111,33 @@ body {
     width: 100%; /* Redimensionamento total da largura */
   }
 }
+
+/* Estilização da Mensagem de Sucesso */
+.mensagem-sucesso {
+    background-color: #e7faf0;
+    border: 1px solid #13ce66;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #085229;
+    margin-top: 15px;
+}
+
+.mensagem-sucesso h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #085229;
+}
+
+.mensagem-sucesso p {
+    font-size: 15px;
+    margin-bottom: 12px;
+    color: #212529;
+}
+
+.aviso-spam {
+    display: block;
+    font-size: 13px;
+    color: #5c6b73;
+    line-height: 1.4;
+}
