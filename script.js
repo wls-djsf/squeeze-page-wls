@@ -2,9 +2,9 @@ const form = document.getElementById('form-squeeze');
 const mensagemSucesso = document.getElementById('mensagem-sucesso');
 
 form.addEventListener('submit', function() {
-    // Dá um breve instante para o envio disparar para o iframe e atualiza a interface
-    setTimeout(() => {
-        form.style.display = 'none';
-        mensagemSucesso.style.display = 'block';
-    }, 300);
+    // Esconde o formulário imediatamente
+    form.style.display = 'none';
+    
+    // Mostra a mensagem de sucesso na hora
+    mensagemSucesso.style.display = 'block';
 });
